@@ -9,7 +9,7 @@ body {
 .main-container {
     display: flex;
     align-items: center;
-    border: red 1px solid;
+    justify-content: center;
 }
 
 @font-face {
@@ -71,15 +71,16 @@ body {
 
 .flavor-text {
     /*font I want + fallback */
-    font-family: 'arial', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: clamp(0.5rem, 1rem + 5vh, 2rem);
+    font-family: 'Times New Roman', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 2vh;
     margin-bottom:clamp(0.5rem, 1rem + 2vh, 2rem);
     margin-right: 15vw;
     padding-left: 5rem;
+    font-size: 1.3rem;
 }
 
 .flavor-text:first-child {
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 form {
@@ -105,7 +106,7 @@ form {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
-    padding: 0 0 1.3rem 5rem;
+    padding: 0 0 1.3rem 3rem;
 }
 
 /*My brain melts when i try to imagine the paddings, but just trust the process here */
@@ -119,8 +120,23 @@ input {
     position: relative;
 }
 
-input:invalid {
+input:required {
+    border: 1px solid black;
+}
+
+input:focus:invalid {
     border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid green;
+}
+
+input:valid + .validity-checker::after {
+    position: absolute;
+    content: "✓";
+    color: green;
+    left: 5px;
 }
 
 input:invalid + .validity-checker::before {
@@ -129,3 +145,24 @@ input:invalid + .validity-checker::before {
     color: red;
     left: 5px;
 }
+
+/*causes too much problems, JS text overflows */
+#pwd-second {
+    position: absolute;
+}
+
+button {
+    appearance: none;
+    background-color: #5d6063;
+    color: white;
+    border-radius: 9px;
+    padding: 1rem;
+    border: none;
+    margin: 1rem 5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 1px 1px gray;
+}
+

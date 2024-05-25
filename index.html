@@ -17,7 +17,7 @@
         </div>
 
         <div class="text-and-form-container">
-            <div class="flavor-text">This page is under maintanance. <strong>Do not attempt to use you real password to log-in or to create an account.</strong> However, you could try various features of this page: password check, email and phone number validation, as well as visual UI/UX for the users to gauge what is expected from them.</div>
+            <div class="flavor-text">This page is under maintanance. <strong>Do not attempt to use you real password to log-in or to create an account.</strong> <br><br> You could try various features of this page: password check, email and phone number validation, as well as visual UI/UX for the users to gauge what is expected from them.</div>
             <div class="flavor-text">Log-in or sign-up to view your dashboard, ongoing projects, and to communicate with the team.</div>
 
             <form action="" method="post" id="sign-up-form">
@@ -27,21 +27,21 @@
                     <div class="form-wrapper">
                         <label for="fname">First Name*</label>
                         <div>
-                            <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John">
+                            <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John" required>
                             <span class="validity-checker"></span>
                         </div>
                     </div>
                     <div class="form-wrapper">
                         <label for="lname">Last Name*</label>
                         <div>
-                            <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish">
+                            <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish" required>
                             <span class="validity-checker"></span>
                         </div>
                     </div>
                     <div class="form-wrapper">
                         <label for="email">Email*</label>
                         <div>
-                            <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru">
+                            <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru" required>
                             <span class="validity-checker"></span>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                     <div class="form-wrapper">
                         <label for="pwd">Password*</label>
                         <div>
-                            <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,40}$" >
+                            <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,40}$" required>
                             <span class="validity-checker"></span>
                         </div>
                         <span id="pwd-initial"></span>
@@ -63,7 +63,7 @@
                     <div class="form-wrapper">
                         <label for="pwd-verification">Confirm Password*</label>
                         <div>
-                            <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40">
+                            <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40" required>
                             <span class="validity-checker"></span>
                         </div>
                         <span id="pwd-second"></span>
@@ -75,6 +75,25 @@
             <div>Already have an account? <a href="">Log in</a></div>
         </div>
     </div>
-    
+
+    <script>
+        const pwdFirst = document.querySelector("#pwd")
+        const pwdSecond = document.querySelector("#pwd-verification");
+        const pwdVerificationMsg = document.querySelector("#pwd-second");
+        const pwdRequirementsMsg = document.querySelector("pwd-initial");
+
+        pwdSecond.addEventListener("input", comparePwd);
+
+        function comparePwd() {
+            if (pwdFirst.value == pwdSecond.value) {
+                pwdVerificationMsg.textContent = "*Passwords match!"
+                pwdVerificationMsg.style.color = "green";
+                return
+            } else {
+                pwdVerificationMsg.style.color = "rgb(202, 97, 97)";
+                pwdVerificationMsg.textContent = "*The passwords do not match"
+            }
+        }
+    </script>
 </body>
 </html>
