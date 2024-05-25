@@ -17,29 +17,58 @@
         </div>
 
         <div class="text-and-form-container">
-            <div class="flavor-text">This page is under maintanance. <strong>Do not attempt to use you real password to log-in or to create an account.</strong></div>
+            <div class="flavor-text">This page is under maintanance. <strong>Do not attempt to use you real password to log-in or to create an account.</strong> However, you could try various features of this page: password check, email and phone number validation, as well as visual UI/UX for the users to gauge what is expected from them.</div>
             <div class="flavor-text">Log-in or sign-up to view your dashboard, ongoing projects, and to communicate with the team.</div>
 
             <form action="" method="post" id="sign-up-form">
-                <label for="fname">First Name*</label>
-                <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John">
-
-                <label for="lname">Last Name*</label>
-                <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish">
-
-                <label for="email">Email*</label>
-                <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru">
-
-                <label for="tel">Phone Number</label>
-                <input id="tel" name="tel" type="tel" minlength="8" maxlength="20" placeholder="+7 / +971 / or +91 numbers">
-
-                <label for="pwd">Password*</label>
-                <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,40}$" autocomplete="off">
-                <span id="pwd-initial"></span>
-
-                <label for="pwd-verification">Confirm Password*</label>
-                <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40">
-                <span id="pwd-second"></span>
+                <div id="sign-up-text">Sign up now</div>
+                <!--Just so the sign up can be in it's own line-->
+                <div class="main-form-wrapper">
+                    <div class="form-wrapper">
+                        <label for="fname">First Name*</label>
+                        <div>
+                            <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John">
+                            <span class="validity-checker"></span>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="lname">Last Name*</label>
+                        <div>
+                            <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish">
+                            <span class="validity-checker"></span>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="email">Email*</label>
+                        <div>
+                            <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru">
+                            <span class="validity-checker"></span>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="tel">Phone Number</label>
+                        <div>
+                            <input id="tel" name="tel" type="tel" minlength="8" maxlength="20" placeholder="+7 / +971 / or +91 numbers">
+                            <span class="validity-checker"></span>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="pwd">Password*</label>
+                        <div>
+                            <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,40}$" >
+                            <span class="validity-checker"></span>
+                        </div>
+                        <span id="pwd-initial"></span>
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="pwd-verification">Confirm Password*</label>
+                        <div>
+                            <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40">
+                            <span class="validity-checker"></span>
+                        </div>
+                        <span id="pwd-second"></span>
+                    </div>
+                </div>
             </form>
             <button form="sign-up-form" type="submit">Create Account</button>
 
