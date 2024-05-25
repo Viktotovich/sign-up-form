@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="logo-and-image-container">
+            <img src="" alt="" />
+            <img src="" alt="company logo">
+            <div class="logo-text"></div>
+        </div>
+
+        <div class="text-and-form-container">
+            <div class="flavor-text">This page is under maintanance. <strong>Do not attempt to use you real password to log-in or to create an account.</strong></div>
+            <div class="flavor-text">Log-in or sign-up to view your dashboard, ongoing projects, and to communicate with the team.</div>
+
+            <form action="" method="post" id="sign-up-form">
+                <label for="fname">First Name*</label>
+                <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John">
+
+                <label for="lname">Last Name*</label>
+                <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish">
+
+                <label for="email">Email*</label>
+                <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru">
+
+                <label for="tel">Phone Number</label>
+                <input id="tel" name="tel" type="tel" minlength="8" maxlength="20" placeholder="+7 / +971 / or +91 numbers">
+
+                <label for="pwd">Password*</label>
+                <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,40}$" autocomplete="off">
+                <span id="pwd-initial"></span>
+
+                <label for="pwd-verification">Confirm Password*</label>
+                <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40">
+                <span id="pwd-second"></span>
+            </form>
+            <button form="sign-up-form" type="submit">Create Account</button>
+
+            <div>Already have an account? <a href="">Log in</a></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
