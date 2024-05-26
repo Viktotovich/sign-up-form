@@ -80,7 +80,7 @@ body {
 }
 
 .flavor-text:first-child {
-    margin-top: 10vh;
+    margin-top: 6vh;
 }
 
 .flavor-text:last-child {
@@ -187,7 +187,7 @@ button {
     border-radius: 9px;
     padding: 1rem 3rem;
     border: none;
-    margin: 2rem 5rem 0rem;
+    margin: 1rem 5rem 0rem;
     font-weight: 700;
 }
 
@@ -203,7 +203,7 @@ button:active {
 
 .log-in {
     padding-left: 5rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .double-form {
@@ -213,8 +213,15 @@ button:active {
 
 @media (max-width: 700px) {
     .double-form {
-        display: block;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
     }
+
+    .form-wrapper {
+        margin-left: 0;
+    }
+
 }
 
 @media (max-width: 1024px) {
