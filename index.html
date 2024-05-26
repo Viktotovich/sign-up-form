@@ -24,49 +24,55 @@
                 <div id="sign-up-text">Sign up now</div>
                 <!--Just so the sign up can be in it's own line-->
                 <div class="main-form-wrapper">
-                    <div class="form-wrapper">
-                        <label for="fname">First Name*</label>
-                        <div>
-                            <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John" required>
-                            <span class="validity-checker"></span>
+                    <div class="double-form">
+                        <div class="form-wrapper">
+                            <label for="fname">First Name*</label>
+                            <div>
+                                <input id="fname" name="fname" type="text" minlength="2" maxlength="25" placeholder="John" required>
+                                <span class="validity-checker"></span>
+                            </div>
+                        </div>
+                        <div class="form-wrapper">
+                            <label for="lname">Last Name*</label>
+                            <div>
+                                <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish" required>
+                                <span class="validity-checker"></span>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="double-form">
+                        <div class="form-wrapper">
+                            <label for="email">Email*</label>
+                            <div>
+                                <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru" required>
+                                <span class="validity-checker"></span>
+                            </div>
+                        </div>
+                        <div class="form-wrapper">
+                            <label for="tel">Phone Number</label>
+                            <div>
+                                <input id="tel" name="tel" type="tel" minlength="8" maxlength="20" placeholder="+7 / +971 / or +91 numbers">
+                                <span class="validity-checker"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-wrapper">
-                        <label for="lname">Last Name*</label>
-                        <div>
-                            <input id="lname" name="lname" type="text" minlength="2" maxlength="25" placeholder="McTavish" required>
-                            <span class="validity-checker"></span>
+                    <div class="double-form">
+                        <div class="form-wrapper">
+                            <label for="pwd">Password*</label>
+                            <div>
+                                <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" required>
+                                <span class="validity-checker"></span>
+                            </div>
+                            <span id="pwd-initial"></span>
                         </div>
-                    </div>
-                    <div class="form-wrapper">
-                        <label for="email">Email*</label>
-                        <div>
-                            <input id="email" name="email" type="email" minlength="4" maxlength="50" placeholder="johnmctavish@mail.ru" required>
-                            <span class="validity-checker"></span>
+                        <div class="form-wrapper">
+                            <label for="pwd-verification">Confirm Password*</label>
+                            <div>
+                                <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40" required>
+                                <span class="pwd-validity"></span>
+                            </div>
+                            <span id="pwd-second"></span>
                         </div>
-                    </div>
-                    <div class="form-wrapper">
-                        <label for="tel">Phone Number</label>
-                        <div>
-                            <input id="tel" name="tel" type="tel" minlength="8" maxlength="20" placeholder="+7 / +971 / or +91 numbers">
-                            <span class="validity-checker"></span>
-                        </div>
-                    </div>
-                    <div class="form-wrapper">
-                        <label for="pwd">Password*</label>
-                        <div>
-                            <input id="pwd" name="pwd" type="password" minlength="8" maxlength="40" required>
-                            <span class="validity-checker"></span>
-                        </div>
-                        <span id="pwd-initial"></span>
-                    </div>
-                    <div class="form-wrapper">
-                        <label for="pwd-verification">Confirm Password*</label>
-                        <div>
-                            <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40" required>
-                            <span class="pwd-validity"></span>
-                        </div>
-                        <span id="pwd-second"></span>
                     </div>
                 </div>
             </form>

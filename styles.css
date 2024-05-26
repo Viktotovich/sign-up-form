@@ -196,9 +196,25 @@ button:hover {
     box-shadow: 0 1px 1px 1px gray;
 }
 
+button:active {
+    cursor:progress;
+    background-color: #777a7e;
+}
+
 .log-in {
     padding-left: 5rem;
     margin-top: 3rem;
+}
+
+.double-form {
+    display: flex;
+}
+
+
+@media (max-width: 700px) {
+    .double-form {
+        display: block;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -211,7 +227,7 @@ button:hover {
     }
 
     .text-and-form-container {
-        width: 50%;
+        width: 80%;
         padding: 2rem;
     }
 
@@ -235,4 +251,5 @@ button:hover {
         margin: 0 auto;
         padding: 0 0 3rem 0;
     }
+
 }
