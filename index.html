@@ -64,7 +64,7 @@
                         <label for="pwd-verification">Confirm Password*</label>
                         <div>
                             <input id="pwd-verification" name="pwd-verification" type="password" minlength="8" maxlength="40" required>
-                            <span class="validity-checker"></span>
+                            <span class="pwd-validity"></span>
                         </div>
                         <span id="pwd-second"></span>
                     </div>
@@ -81,7 +81,8 @@
         const pwdSecond = document.querySelector("#pwd-verification");
         const pwdVerificationMsg = document.querySelector("#pwd-second");
         const pwdRequirementsMsg = document.querySelector("pwd-initial");
-        const submitButton = document.querySelector("#submit-button")
+        const submitButton = document.querySelector("#submit-button");
+        const validityDisplay = document.querySelector(".pwd-validity");
 
         pwdSecond.addEventListener("input", comparePwd);
         pwdFirst.addEventListener("input", comparePwd);
@@ -90,14 +91,15 @@
             if (pwdFirst.value == pwdSecond.value) {
                 pwdVerificationMsg.textContent = "*Passwords match!"
                 pwdVerificationMsg.style.color = "green";
+                validityDisplay.id = "pwd-valid";
                 return
             } else if (pwdSecond.value == '') {
                 pwdVerificationMsg.textContent = "Please re-enter your password here";
             } else {
                 pwdVerificationMsg.style.color = "rgb(202, 97, 97)";
                 pwdVerificationMsg.textContent = "*The passwords do not match";
-                button.preventDefault();
-                
+                validityDisplay.id = "pwd-invalid";
+                return false;
             }
         }
     </script>

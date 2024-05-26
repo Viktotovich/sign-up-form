@@ -63,7 +63,7 @@ body {
 
 
 .text-and-form-container {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -154,6 +154,26 @@ input:invalid + .validity-checker::before {
 .form-wrapper:last-child {
     position: relative;
 }
+
+.pwd-validity {
+    position: relative;
+}
+
+input + #pwd-invalid::after {
+    position: absolute;
+    content: "x";
+    color: red;
+    left: 5px;
+}
+
+
+input:valid + #pwd-valid::after {
+    position: absolute;
+    content: "✓";
+    color: green;
+    left: 5px;
+}
+
 /*causes too much problems, JS text overflows - solved with the code above - as it allows us to absolutely position our JS text without pushing content unpredictably */
 #pwd-second {
     position: absolute;
