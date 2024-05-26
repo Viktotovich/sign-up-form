@@ -214,14 +214,18 @@ button:active {
 @media (max-width: 700px) {
     .double-form {
         display: flex;
-        align-items: flex-end;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .form-wrapper {
         margin-left: 0;
     }
+}
 
+@media (min-width: 600px) and (max-width: 900px){
+    .double-form {
+        flex-wrap: nowrap;
+    }
 }
 
 @media (max-width: 1024px) {
